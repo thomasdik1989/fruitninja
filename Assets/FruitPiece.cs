@@ -1,16 +1,23 @@
 using UnityEngine;
 
 public class FruitPiece : MonoBehaviour {
-  private Rigidbody fruitPiece;
-  private float _rotationSpeed = 15f;
+  public GameObject left;
+  public GameObject right;
+  private Rigidbody LeftRigidBody;
+  private Rigidbody RightRigidBody;
+  private readonly float _rotationSpeed = 15f;
 
   private void Start() {
-    fruitPiece = GetComponent<Rigidbody>();
-    fruitPiece.AddForce(transform.up * 5, ForceMode.Impulse);
+    LeftRigidBody = left.GetComponentInChildren(typeof(Rigidbody)) as Rigidbody;
+    RightRigidBody = right.GetComponentInChildren(typeof(Rigidbody)) as Rigidbody;
+
+    LeftRigidBody.AddForce(transform.right * 2, ForceMode.Impulse);
+    RightRigidBody.AddForce(transform.up * 2, ForceMode.Impulse);
   }
 
   private void Update() {
-    fruitPiece.transform.Rotate(Vector3.up, _rotationSpeed * Time.deltaTime);
+    left.transform.Rotate(Vector3.up, _rotationSpeed * Time.deltaTime);
+    right.transform.Rotate(Vector3.up, _rotationSpeed * Time.deltaTime);
   }
 
 }

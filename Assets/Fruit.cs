@@ -1,13 +1,16 @@
+using System.Collections;
 using UnityEngine;
 
 public class Fruit : MonoBehaviour {
 
   public GameObject fruitSlicedPrefab;
+  private GameObject fruitPieces;
+
   public float startForce = 12f;
 
   private Rigidbody2D rb;
 
-  private void Start() {
+  public void OnEnable() {
     rb = GetComponent<Rigidbody2D>();
     rb.AddForce(transform.up * startForce, ForceMode2D.Impulse);
   }
@@ -19,12 +22,10 @@ public class Fruit : MonoBehaviour {
     Vector3 heading = (collision.transform.position - transform.position).normalized;
     Quaternion rotation = Quaternion.LookRotation(heading);
 
-    Destroy(gameObject);
-    for (int pieces = 0; pieces < 2; pieces++) {
-      GameObject piece = Instantiate(fruitSlicedPrefab, transform.position, rotation);
-      piece.SetActive(true);
-      Destroy(piece, 3f);
-    }
+    gameObject.SetActive(false);
+    fruitPieces = Instantiate(fruitSlicedPrefab, transform.position, rotation);
+    fruitPieces.SetActive(true);
+    Destroy(fruitPieces, 4f);
   }
 
 }
