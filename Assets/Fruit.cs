@@ -5,6 +5,7 @@ public class Fruit : MonoBehaviour {
 
   public GameObject fruitSlicedPrefab;
   private GameObject fruitPieces;
+  public GameObject ExplosionPrefab;
 
   public float startForce = 12f;
 
@@ -23,6 +24,8 @@ public class Fruit : MonoBehaviour {
     Quaternion rotation = Quaternion.LookRotation(heading);
 
     gameObject.SetActive(false);
+    GameObject vfx = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
+    vfx.GetComponent<ParticleSystem>().Play();
     fruitPieces = Instantiate(fruitSlicedPrefab, transform.position, rotation);
     fruitPieces.SetActive(true);
     Destroy(fruitPieces, 4f);

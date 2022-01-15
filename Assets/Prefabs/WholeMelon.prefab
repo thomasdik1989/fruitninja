@@ -136,4 +136,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitSlicedPrefab: {fileID: 1515522835905553119, guid: af797d08ee8fa4111b758f97c6a27d8f, type: 3}
+  ExplosionPrefab: {fileID: 3597788289839493635, guid: d084763d271174a36a04b64731737753, type: 3}
   startForce: 12
