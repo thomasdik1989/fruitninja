@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 
 public class FruitSpawner : MonoBehaviour {
-  public GameObject fruitPrefab;
+  public GameObject[] fruitPrefabs;
   public Transform[] spawnPoints;
   private ObjectPool<GameObject> pool;
 
@@ -12,7 +12,8 @@ public class FruitSpawner : MonoBehaviour {
 
   private void Start() {
     pool = new ObjectPool<GameObject>(() => {
-      return Instantiate(fruitPrefab);
+      int fruitType = Random.Range(0, fruitPrefabs.Length);
+      return Instantiate(fruitPrefabs[fruitType]);
     }, fruit => {
       fruit.SetActive(true);
       int spawnIndex = Random.Range(0, spawnPoints.Length);
