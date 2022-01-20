@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="justify-content: center; align-items: center; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; right: 0; position: absolute; top: 0; opacity: 0.7; background-color: rgb(22, 22, 22);">
+        <ui:Label text="Score: 0" display-tooltip-when-elided="true" name="score-label" style="-unity-font: url(&apos;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#Arial&apos;); font-size: 28px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
+    </ui:VisualElement>
+</ui:UXML>

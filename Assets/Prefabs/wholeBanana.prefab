@@ -100,7 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitSlicedPrefab: {fileID: 6198000047989492618, guid: 19b438cccb1e14c07ad4fd862830b6a3, type: 3}
   ExplosionPrefab: {fileID: 3597788289839493635, guid: d084763d271174a36a04b64731737753, type: 3}
+  scoreManager: {fileID: 0}
   startForce: 12
+  points: 5
 --- !u!58 &8076873509434860803
 CircleCollider2D:
   m_ObjectHideFlags: 0
