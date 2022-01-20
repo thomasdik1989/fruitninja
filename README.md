@@ -3,7 +3,10 @@ Sample project for learning Unity
 Basic setup for a fruitninja like game with objectpooling for the fruits.
 
 ## TODO
-- Add more fruit types.
-- Add a scoring system and show the scores.
 - Add a background.
-- Add splatter effects when hitting fruit.
+- Cleanup the code split into smaller methods to reduce clutter and improve
+overall readability.
+- Add a start menu.
+- Add boms or other more challenging fruits.
+- Add sound effects
+- Add music.

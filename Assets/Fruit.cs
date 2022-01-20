@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Fruit : MonoBehaviour {
@@ -6,10 +5,16 @@ public class Fruit : MonoBehaviour {
   public GameObject fruitSlicedPrefab;
   private GameObject fruitPieces;
   public GameObject ExplosionPrefab;
+  public ScoreManager scoreManager;
 
   public float startForce = 12f;
+  public int points = 10;
 
   private Rigidbody2D rb;
+
+  public void Awake() {
+    scoreManager = (ScoreManager)ScoreManager.Instance;
+  }
 
   public void OnEnable() {
     rb = GetComponent<Rigidbody2D>();
@@ -23,6 +28,7 @@ public class Fruit : MonoBehaviour {
     Vector3 heading = (collision.transform.position - transform.position).normalized;
     Quaternion rotation = Quaternion.LookRotation(heading);
 
+    scoreManager.AppendScore(points);
     gameObject.SetActive(false);
     GameObject vfx = Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
     vfx.GetComponent<ParticleSystem>().Play();
