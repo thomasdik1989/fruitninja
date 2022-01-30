@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/styles.uss?fileID=7433441132597879392&amp;guid=741a7f909e4364b95b3fc3953b9363e0&amp;type=3#styles" />
+    <ui:VisualElement name="Root" usage-hints="None" class="root">
+        <ui:VisualElement style="align-items: center; padding-top: 20px;">
+            <ui:Label text="Fruity Slicer" display-tooltip-when-elided="true" name="Title" class="title" />
+            <ui:VisualElement name="Menu" style="top: 200px;">
+                <ui:Button text="Start Game" display-tooltip-when-elided="true" name="StartButton" class="blue-button" />
+                <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" tabindex="1" class="blue-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
