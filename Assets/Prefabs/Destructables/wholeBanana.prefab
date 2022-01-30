@@ -57,7 +57,7 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -98,11 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e48cc0cc86e484883de781602598e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitSlicedPrefab: {fileID: 6198000047989492618, guid: 19b438cccb1e14c07ad4fd862830b6a3, type: 3}
-  ExplosionPrefab: {fileID: 3597788289839493635, guid: d084763d271174a36a04b64731737753, type: 3}
-  scoreManager: {fileID: 0}
   startForce: 12
   points: 5
+  fruitSlicedPrefab: {fileID: 6198000047989492618, guid: 19b438cccb1e14c07ad4fd862830b6a3, type: 3}
+  ExplosionPrefab: {fileID: 3597788289839493635, guid: d084763d271174a36a04b64731737753, type: 3}
 --- !u!58 &8076873509434860803
 CircleCollider2D:
   m_ObjectHideFlags: 0

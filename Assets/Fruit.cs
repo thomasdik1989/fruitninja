@@ -20,6 +20,7 @@ public class Fruit : Destructable {
     fruitPieces = Instantiate(fruitSlicedPrefab, transform.position, rotation);
     fruitPieces.SetActive(true);
     Destroy(fruitPieces, 4f);
+    Destroy(vfx, 2f);
   }
 
 }

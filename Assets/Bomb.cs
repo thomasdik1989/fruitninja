@@ -37,6 +37,12 @@ public class Bomb : Destructable {
 
     GameObject hemiSphereBurst = Instantiate(hemiSphereBurstPrefab, transform.position, Quaternion.identity);
     hemiSphereBurst.GetComponent<ParticleSystem>().Play();
+
+    Destroy(smoke, 2f);
+    Destroy(distortion, 5f);
+    Destroy(sparks, 3f);
+    Destroy(embers, 3f);
+    Destroy(hemiSphereBurst, 2f);
   }
 
 }
